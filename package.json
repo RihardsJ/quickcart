@@ -5,14 +5,15 @@
   "scripts": {
     "build:api": "pnpm -F @quickcart/api build",
     "build:ui": "pnpm -F @quickcart/ui build",
-    "dev": "pnpm --stream -r run dev",
+    "dev": "pnpm --stream -r dev",
     "dev:api": "pnpm -F @quickcart/api dev",
     "dev:ui": "pnpm -F @quickcart/ui dev",
     "start": "pnpm --stream -r start",
     "start:api": "pnpm -F @quickcart/api start",
     "start:ui": "pnpm -F @quickcart/ui start",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test:api": "pnpm -F @quickcart/api test"
+    "test": "pnpm --stream -r test",
+    "test:api": "pnpm -F @quickcart/api test",
+    "test:ui": "pnpm -F @quickcart/ui test"
   },
   "engines": {
     "node": ">=18.8",
@@ -24,7 +25,9 @@
     "@typescript-eslint/parser": "6.8.0",
     "eslint": "8.52.0",
     "eslint-config-prettier": "9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-prettier": "5.0.1",
+    "husky": "8.0.0",
+    "lint-staged": "15.0.2",
     "nodemon": "3.0.1",
     "ts-node": "10.9.1",
     "typescript": "5.2.2"
