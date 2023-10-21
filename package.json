@@ -11,7 +11,8 @@
     "start": "pnpm --stream -r start",
     "start:api": "pnpm -F @quickcart/api start",
     "start:ui": "pnpm -F @quickcart/ui start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:api": "pnpm -F @quickcart/api test"
   },
   "engines": {
     "node": ">=18.8",
