@@ -6,7 +6,7 @@
     "tsconfigRootDir": "__dirname",
     "project": true
   },
-  "ignorePatterns": ["node_modules", "dist", ""],
+  "ignorePatterns": ["node_modules", "dist"],
   "overrides": [
     {
       "files": ["**/*.test.ts"],
