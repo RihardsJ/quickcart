@@ -1,12 +1,22 @@
 {
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended-type-checked"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:@typescript-eslint/recommended-type-checked"
+  ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "prettier"],
   "parserOptions": {
     "tsconfigRootDir": "__dirname",
     "project": true
   },
-  "ignorePatterns": ["node_modules", "dist"],
+  "settings": {
+    "import/resolver": {
+      "typescript": true,
+      "node": true
+    }
+  },
+  "ignorePatterns": ["node_modules", "dist", "jest.config.ts"],
   "overrides": [
     {
       "files": ["**/*.test.ts"],

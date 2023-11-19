@@ -1,7 +1,10 @@
-import app from './app';
+import { container } from './configs';
 
-const PORT = 5000;
+const server = container.resolve('server');
+const { PORT } = container.resolve('constants');
 
-app.listen(PORT, () => {
-  console.log(`quickcart api is running on port ${PORT}`);
-});
+function serverCallback() {
+  console.log(`🚀 server is running! 📡 http://localhost:${PORT}`);
+}
+
+server.listen(PORT, serverCallback);
